@@ -1,0 +1,35 @@
+{
+  "name": "tiny-vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn optmize && yarn dev",
+    "dev": "esno src/dev.command.ts",
+    "optmize": "esno src/optmize.command.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/resolve": "^1.20.6",
+    "@types/ws": "^8.5.11",
+    "chalk": "^5.3.0",
+    "chokidar": "^3.6.0",
+    "esbuild": "^0.23.0",
+    "esbuild-darwin-arm64": "^0.15.18",
+    "esno": "^4.7.0",
+    "express": "^4.19.2",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resolve": "^1.22.8",
+    "typescript": "^5.5.4",
+    "ws": "^8.18.0"
+  }
+}
