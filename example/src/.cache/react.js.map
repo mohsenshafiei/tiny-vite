@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["dep:react"],
+  "sourcesContent": ["import d from \"/Users/zaal/Workspace/tiny-vite/node_modules/react/index.js\";export default d;\nexport * from \"/Users/zaal/Workspace/tiny-vite/node_modules/react/index.js\";\n"],
+  "mappings": ";;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAc;AACd,0BAAc;AAD8D,IAAO,gBAAQ,aAAAA;",
+  "names": ["d"]
+}

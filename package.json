@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "yarn optmize && yarn dev",
+    "start": "npm run optimize && npm run  dev",
     "dev": "esno src/dev.command.ts",
-    "optmize": "esno src/optmize.command.ts"
+    "optimize": "esno src/optimize.command.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "@types/ws": "^8.5.11",
     "chalk": "^5.3.0",
     "chokidar": "^3.6.0",
+    "dotenv": "^16.4.5",
     "esbuild": "^0.23.0",
     "esbuild-darwin-arm64": "^0.15.18",
     "esno": "^4.7.0",
