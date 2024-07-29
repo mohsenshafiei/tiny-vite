@@ -72,3 +72,33 @@ npm start
 ```
 
 Enjoy tiny-vite with a simple HMR support.
+
+# Challenges with Vite
+
+- When you are working in an enterprise company with 6000 modules. There will be a Network bottleneck of unbundled ESM during dev
+- Esbuild challenges are:
+  - Limited chunk control
+  - -Difficult to customize and extend
+- Rollup challenges are:
+
+  - slow build speed compared to native
+  - Limited chunk split control compared to webpack
+  - No module federation support
+
+- Using the current architecture of Vite makes bundling behaviour inconsistent (Mostly for mixed ESM/CJS deps)
+
+- There are also pipeline inefficiency: multiple parse -> transform -> codegen passes across differnt toolchains
+- Vite is creating rolldown -> the rust bundler for vite to remove relience on any other tool
+- Features that rolldown is going to support:
+  - Built-in transform (TS, JSX, Target Lowering)
+  - Built-in minification
+  - Built-in Node + TS Compatible resolution
+  - Output modes:
+    - Library mode (esm w/ scope hoisting a la Rollup / esbuild)
+    - App mode (advanced chunk splitting, module federation)
+
+# Things to learn
+
+- semantics ->
+  - This is gonna save on ASTs
+- arena allocator technique
