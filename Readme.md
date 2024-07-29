@@ -1,8 +1,10 @@
 # What Vite Does
 
-Vite is a modern build tool that provides a fast development environment by leveraging native `ES Modules` and `esbuild` for fast dependency pre-bundling. Here's a detailed look at how Vite operates:
+Vite is a modern build tool that provides a fast development environment by leveraging native `ES Modules` and `esbuild` for fast dependency pre-bundling.
 
-## Key Features of Vite
+Here's a detailed look at how Vite operates:
+
+Key Features of Vite are:
 
 ### Instant Server Start:
 
@@ -10,9 +12,9 @@ Vite starts the `development server almost instantly` regardless of the size of 
 
 ### On-Demand Compilation:
 
-Vite compiles your code on-demand as you navigate your application. `This means it only processes the files that are actually requested by the browser, which leads to much faster initial load times and efficient updates`. Hot Module
+Vite compiles your code on-demand as you navigate your application. `This means it only processes the files that are actually requested by the browser, which leads to much faster initial load times and efficient updates`.
 
-### Replacement (HMR):
+### Hot Module Replacement (HMR):
 
 Vite provides a highly efficient `Hot Module Replacement (HMR)` out of the box.
 
@@ -22,23 +24,25 @@ For `production, Vite uses Rollup to bundle your code`. Rollup is an advanced mo
 
 Vite uses esbuild to pre-bundle dependencies. Esbuild is an extremely fast bundler written in Go. This step helps to resolve CommonJS and UMD modules into ESM format, which ensures compatibility and significantly speeds up the development server.
 
-## How Vite Works Development Mode Native ESM Support:
+## How Vite Works
+
+### Development Mode Native ESM Support:
 
 Vite serves files as native ES Modules directly to the browser. This is possible because modern browsers support ESM natively, which allows for instant module resolution without the need for a bundling step during development.
 
-## File Watching:
+### File Watching:
 
 Vite watches your source files for changes. When a file is modified, Vite only recompiles that specific file and updates the browser using HMR, providing a near-instant feedback loop.
 
-## ESBuild for Dependencies:
+### ESBuild for Dependencies:
 
 During development, Vite uses esbuild to pre-bundle dependencies. This ensures that large dependencies are loaded quickly and efficiently.
 
-## Production Mode Bundling with Rollup:
+### Production Mode Bundling with Rollup:
 
 When you build your project for production, Vite uses Rollup to bundle your application. Rollup performs advanced optimizations such as tree-shaking (removing unused code) and code splitting (splitting your code into smaller chunks that can be loaded on demand).
 
-## Optimizations:
+### Optimizations:
 
 Vite applies several optimizations to your production build, including `minification`, `chunk splitting`, and more, to ensure that your application loads quickly and performs well.
 
@@ -57,7 +61,7 @@ Vite applies several optimizations to your production build, including `minifica
 - Production Build with Rollup
 - Production Build: Minification, Chunk Splitting, Removing Unused Code
 
-## How to use
+### How to use
 
 First you need install dev dependencies
 
@@ -73,12 +77,12 @@ npm start
 
 Enjoy tiny-vite with a simple HMR support.
 
-# Challenges with Vite
+## Challenges with Vite
 
 - When you are working in an enterprise company with 6000 modules. There will be a Network bottleneck of unbundled ESM during dev
 - Esbuild challenges are:
   - Limited chunk control
-  - -Difficult to customize and extend
+  - Difficult to customize and extend
 - Rollup challenges are:
 
   - slow build speed compared to native
@@ -96,9 +100,3 @@ Enjoy tiny-vite with a simple HMR support.
   - Output modes:
     - Library mode (esm w/ scope hoisting a la Rollup / esbuild)
     - App mode (advanced chunk splitting, module federation)
-
-# Things to learn
-
-- semantics ->
-  - This is gonna save on ASTs
-- arena allocator technique
